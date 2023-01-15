@@ -1,38 +1,67 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  margin: 10px auto;
   display: flex;
   flex-direction: column;
+   width: 600px;
+  background-color: beige;
+  min-height: 600px;
+  border: 1px solid #cea3a3;
+  border-radius: 5px;
+}
+ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 5px auto;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+li{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid gray;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  min-height: 40px;
+  align-items: center;
+  font-size: 24px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.checkbox{
+  margin-right: 10px;
+}
+.checkbox:checked +span{
+  text-decoration: line-through;
+}
+.close{
+  color: red;
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+.close:hover{
+  transform: scale(1.5);
+}
+.add-input{
+  height: 30px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  text-align: left;
+  padding-left: 5px;
+  margin-top: 10px;
+}
+.add-input:active{
+  border: 1px solid gray;
+}
+.add-btn{
+  background-color: #43da43;
+  border:1px solid gray;
+  cursor: pointer;
+  margin-left: 5px;
+  height: 30px;
+  border-radius: 4px;
 }
