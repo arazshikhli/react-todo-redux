@@ -4,15 +4,18 @@ const postSlice=createSlice({
     initialState:{posts:[]},
     reducers:{
         addPost(state,action){
-            console.log(state)
-            console.log(action)
+            console.log('State: ',state)
+            console.log('Action: ',action)
             state.posts.push({
                 id:new Date().toISOString(),
                 text:action.payload.postText,
                 title:action.payload.postTitle
             })
         },
-        removePost(state,acton){},
+        removePost(state,action){
+            console.log(action)
+            state.posts=state.posts.filter(post=>post.id!==action.payload.id)
+        },
         editPost(state,action){}
     }
 })
